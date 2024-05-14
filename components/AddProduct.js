@@ -10,6 +10,10 @@ const handleClick = () => {
   submitHandler(product);
   setProduct("")
 }
+const handleClick2 = () => {
+  setProduct("")
+}
+
 
   return (
       <View style={styles.inputContainer}>
@@ -22,6 +26,8 @@ const handleClick = () => {
         <View style={styles.button}>
           {/* <Button  title="Valider" onPress={()=>submitHandler(product,setProduct)}></Button> */}
           <Button title= "Valider" onPress={handleClick}></Button>
+          <Button title= "Annuler" onPress={handleClick2}></Button>
+
         </View> 
       </View>
   )

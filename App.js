@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Button, StyleSheet,ImageBackground,image, TextInput, View, FlatList } from 'react-native';
 import Products from "./components/Products";
 import AddProduct from "./components/AddProduct";
 
@@ -22,6 +21,12 @@ export default function App() {
     const idString = Date.now().toString();
     setMyProducts(currentMyProducts => [{key: idString, name: product},... currentMyProducts]);
   }
+  const deleteProduct = (key) => {
+    console.log("delete", product);
+    setMyProducts(currentMyProducts => {
+      return currentMyProducts.filter( product=> product.key != key)
+    })
+  }
 
   return (
     <View style={styles.container}>
@@ -32,8 +37,13 @@ export default function App() {
       <FlatList
         data={myProducts}
 
-        renderItem={({item}) => <Products name={item.name}/>
-        }
+        renderItem={({item}) => (
+          <Products 
+            name={item.name}
+            idString={item.key} 
+            deleteProduct={deleteProduct}
+            />
+        )}
       />
     </View>
   );
