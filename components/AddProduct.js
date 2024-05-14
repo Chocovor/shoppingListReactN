@@ -6,16 +6,23 @@ const [product, setProduct] = useState("");
 const inputHandler = (val) => {
     setProduct(val);
   };
+const handleClick = () => {
+  submitHandler(product);
+  setProduct("")
+}
 
   return (
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.textInput}
-          placeholder="nouveau produit"
+          placeholder="inscrivez un nouveau produit ici"
           value={product}
           onChangeText={inputHandler}
         ></TextInput>
-        <Button style={styles.button} title="Valider" onPress={()=>submitHandler(product,setProduct)}></Button>
+        <View style={styles.button}>
+          {/* <Button  title="Valider" onPress={()=>submitHandler(product,setProduct)}></Button> */}
+          <Button title= "Valider" onPress={handleClick}></Button>
+        </View> 
       </View>
   )
 }
@@ -23,19 +30,21 @@ const inputHandler = (val) => {
 const styles = StyleSheet.create({
     inputContainer: {
       backgroundColor: "lightgrey",
-      flexDirection: "row",
-      marginBottom: 10,
-      alignItems: "center",
-      justifyContent: "space-between",
+      marginBottom: 10
     },
     textInput: {
       color: "black",
+      backgroundColor: "white",
       fontSize: 20,
+      marginVertical: 15,
+      borderWidth: 1,
+      textAlign: "center",
     },
     button:{
-        alignItems: "flex-end",
-        marginLeft: 20,
-    }
+      flexDirection:"row",
+      justifyContent:'space-around',
+      
+    },
 })
 
 
