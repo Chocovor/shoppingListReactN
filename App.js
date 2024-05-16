@@ -5,7 +5,6 @@ import { Button, StyleSheet, TextInput, View, FlatList, ImageBackground } from '
 
 
 
-
 export default function App() {
 
   // const [product, setProduct] = useState ("");
