@@ -1,7 +1,7 @@
 import React from 'react'
 import { View,Text, StyleSheet, TouchableOpacity, Pressable} from 'react-native'
 
-const Products = ({name}) => {
+const Products = ({name, idString, deleteProduct}) => {
   return (
     // <TouchableOpacity
     //   activeOpacity={0.2}
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
       padding: 20,
       fontSize: 30,
       marginVertical: 6,
-      textAlign: "center"
+      textAlign: "center",
     },
   });
 

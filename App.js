@@ -29,8 +29,8 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <ImageBackground source={image} resizeMode="cover" style={styles.image}></ImageBackground>
+    
+    <ImageBackground source= {"https://www.regilait.com/app/uploads/2023/03/cookies-caramel-paques-oeufs-en-chocolat-lait-concentre-sucre-regilait.jpg"} resizeMode="cover" style={styles.container}>
       <AddProduct submitHandler={submitHandler}>
 
       </AddProduct>
@@ -45,7 +45,7 @@ export default function App() {
             />
         )}
       />
-    </View>
+    </ImageBackground>
   );
 }
 
@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 40,
     paddingTop: 60,
+    height: "100%"
     
   }
 })
