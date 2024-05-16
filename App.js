@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Products from "./components/Products";
 import AddProduct from "./components/AddProduct";
+import { Button, StyleSheet, TextInput, View, FlatList, ImageBackground } from 'react-native';
+
 
 
 
@@ -30,7 +32,7 @@ export default function App() {
 
   return (
     
-    <ImageBackground source= {"https://www.regilait.com/app/uploads/2023/03/cookies-caramel-paques-oeufs-en-chocolat-lait-concentre-sucre-regilait.jpg"} resizeMode="cover" style={styles.container}>
+    <ImageBackground source= {"https://www.regilait.com/app/uploads/2023/03/cookies-caramel-paques-oeufs-en-chocolat-lait-concentre-sucre-regilait.jpg"} style={styles.container}>
       <AddProduct submitHandler={submitHandler}>
 
       </AddProduct>
@@ -52,8 +54,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     padding: 40,
-    paddingTop: 60,
-    height: "100%"
-    
+    paddingTop: 60
   }
 })

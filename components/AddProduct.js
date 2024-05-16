@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Button, StyleSheet, TextInput, View, FlatList } from 'react-native';
+import ButtonCOmponent from '../components/ButtonComponent'
 
 const AddProduct = ({submitHandler}) => {
 const [product, setProduct] = useState("");
@@ -27,6 +28,9 @@ const handleClick2 = () => {
           {/* <Button  title="Valider" onPress={()=>submitHandler(product,setProduct)}></Button> */}
           <Button title= "Valider" onPress={handleClick}></Button>
           <Button title= "Annuler" onPress={handleClick2}></Button>
+          <ButtonComponent></ButtonComponent>
+          <ButtonComponent></ButtonComponent>
+
 
         </View> 
       </View>
