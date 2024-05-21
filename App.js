@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Products from "./components/Products";
 import AddProduct from "./components/AddProduct";
 import Header from './components/Header';
-import { Button, StyleSheet, TextInput, View, FlatList, ImageBackground, } from 'react-native';
-
+import BarNavigation from './components/BarNavigation.js';
+import { Button, StyleSheet, TextInput, View, FlatList,Image, ImageBackground} from 'react-native';
 
 
 export default function App() {
@@ -36,7 +36,6 @@ export default function App() {
           Bienvenue sur l'app mobile de Mathias
       </Header>
       <ImageBackground source= {"https://www.regilait.com/app/uploads/2023/03/cookies-caramel-paques-oeufs-en-chocolat-lait-concentre-sucre-regilait.jpg"} style={styles.container}>
-        {/* <Header>Bienvenue</Header> */}
         
         <AddProduct submitHandler={submitHandler}>
 
@@ -53,6 +52,7 @@ export default function App() {
           )}
         />
       </ImageBackground>
+      <BarNavigation></BarNavigation>
     </View>
   );
 }
