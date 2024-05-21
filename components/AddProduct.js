@@ -31,22 +31,21 @@ const handleClick2 = () => {
         </View> 
 
           <ButtonComponent
-            title="Valider"
+            // title="Valider"
             onPress={handleClick}
             style={styles.buttonValider}
           >
-
+            valider
           </ButtonComponent>
 
           <ButtonComponent
-            title="Annuler"
+            // title="Annuler"
             onPress={handleClick2}
             style={styles.buttonAnnuler}
 
-          ></ButtonComponent>
-          <ButtonComponent
-            title="test"
-          />
+          >annuler</ButtonComponent>
+
+          <ButtonComponent>test</ButtonComponent>
         
       </View>
   )

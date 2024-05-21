@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Products from "./components/Products";
 import AddProduct from "./components/AddProduct";
-import { Button, StyleSheet, TextInput, View, FlatList, ImageBackground } from 'react-native';
+import Header from './components/Header';
+import { Button, StyleSheet, TextInput, View, FlatList, ImageBackground, } from 'react-native';
 
 
 
@@ -30,23 +31,29 @@ export default function App() {
   }
 
   return (
-    
-    <ImageBackground source= {"https://www.regilait.com/app/uploads/2023/03/cookies-caramel-paques-oeufs-en-chocolat-lait-concentre-sucre-regilait.jpg"} style={styles.container}>
-      <AddProduct submitHandler={submitHandler}>
+    <View>
+      <Header>
+          Bienvenue sur l'app mobile de Mathias
+      </Header>
+      <ImageBackground source= {"https://www.regilait.com/app/uploads/2023/03/cookies-caramel-paques-oeufs-en-chocolat-lait-concentre-sucre-regilait.jpg"} style={styles.container}>
+        {/* <Header>Bienvenue</Header> */}
+        
+        <AddProduct submitHandler={submitHandler}>
 
-      </AddProduct>
-      <FlatList
-        data={myProducts}
+        </AddProduct>
+        <FlatList
+          data={myProducts}
 
-        renderItem={({item}) => (
-          <Products 
-            name={item.name}
-            idString={item.key} 
-            deleteProduct={deleteProduct}
-            />
-        )}
-      />
-    </ImageBackground>
+          renderItem={({item}) => (
+            <Products 
+              name={item.name}
+              idString={item.key} 
+              deleteProduct={deleteProduct}
+              />
+          )}
+        />
+      </ImageBackground>
+    </View>
   );
 }
 
@@ -54,5 +61,9 @@ const styles = StyleSheet.create({
   container: {
     padding: 40,
     paddingTop: 60
-  }
+  },
+  header:{
+
+  },
+
 })
